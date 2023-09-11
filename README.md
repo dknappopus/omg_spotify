@@ -1,1 +1,2 @@
-# omg_spotify
+# Description
+Repo for code that uses Spotify API
