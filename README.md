@@ -11,16 +11,15 @@ If there are 'Not Found' ISRCs in the output file, you should verify that the ti
 2) Clone Repo `git clone https://github.com/dknappopus/omg_spotify.git`
 3) navigate to repo `cd ./omg_spotify`
 4) Add input file `<input_file_name.xlsx>` to repo
-5) Open Terminal
-6) Create virtual environment
+5) Create virtual environment
    `python -m venv spotify_venv`
-7) Activate virtual environment
+6) Activate virtual environment
    `./spotify_venv/Scripts/activate`
-8) Install required packages (this will take a few minutes on first install)
+7) Install required packages (this will take a few minutes on first install)
     `pip install -r requirements.txt`
-9) Run python
+8) Run python
     `python spotify_isrc_lookup.py <input_file_name.xslx>`
-10) file will be saved as input_data_isrc.csv
+9) file will be saved as input_data_isrc.csv
 
 ## known issues
 - you may have to edit your registry if you get a 'file path too long error' on install. steps to do that:
