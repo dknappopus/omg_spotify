@@ -19,7 +19,7 @@ If there are 'Not Found' ISRCs in the output file, you should verify that the ti
     `pip install -r requirements.txt`
 8) Run python
     `python spotify_isrc_lookup.py <input_file_name.xslx>`
-9) file will be saved as input_data_isrc.csv
+9) Resulting file will be saved as input_data_isrc.csv - use this to populate the ISRCs in the input file
 
 ## known issues
 - you may have to edit your registry if you get a 'file path too long error' on install. steps to do that:
