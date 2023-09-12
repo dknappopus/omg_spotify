@@ -1,20 +1,21 @@
 # Description
 Repo for code that uses Spotify API
 
-## Steps to Run
-1) Clone Repo
-2) navigate to repo
-3) Add input file to repo
-4) Open Terminal
-5) Create virtual environment
+## Steps to Run - first time
+1) Open Terminal and navigate to where you want to store the code
+2) Clone Repo `git clone https://github.com/dknappopus/omg_spotify.git`
+3) navigate to repo `cd ./omg_spotify`
+4) Add input file to repo
+5) Open Terminal
+6) Create virtual environment
    `python -m venv spotify_venv`
-6) Activate virtual environment
+7) Activate virtual environment
    `./spotify_venv/Scripts/activate`
-7) Install required packages (this will take a few minutes on first install)
+8) Install required packages (this will take a few minutes on first install)
     `pip install -r requirements.txt`
-8) Run python
+9) Run python
     `python spotify_isrc_lookup.py <input_file_name.xslx>`
-9) file will be saved as input_data_isrc.csv
+10) file will be saved as input_data_isrc.csv
 
 ## known issues
 - you may have to edit your registry if you get a 'file path too long error' on install. steps to do that:
