@@ -1,6 +1,11 @@
 # Description
 Repo for code that uses Spotify API
 
+How it works: given a record, the code will generate queries to execute in the spotify search API. For example, if the song name is 'Hotel in Sydney' and the artist is 'Hopsin', then the code will create a query, 'track: Hotel in Sydney artist: Hospin' and return the resulting ISRC. The code executes this for all records in the input file, and outputs a csv with the ISRC filled in. If there is an error or no match is found, the resulting ISRC will be 'Not Found'
+Sometimes there may be issues where multiple artists are on a song. In this case, a query is constructed for each artist on the song. For example, in the song 'FV Till I Die' with the artst 'Hopsin, SwizZz', two queries are constructed, one where the artist is Hopsin and one where the artist is SwizZz. This should increase the chances of a successful search.
+
+If there are 'Not Found' ISRCs in the output file, you should verify that the titles and artists are correct or manually look up the ISRCs.
+
 ## Steps to Run - first time
 1) Open Terminal and navigate to where you want to store the code
 2) Clone Repo `git clone https://github.com/dknappopus/omg_spotify.git`
