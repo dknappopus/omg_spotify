@@ -12,10 +12,22 @@ import os
 
 from itertools import product
 
+
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
+
 import sys
 
 
 os.getcwd()
+
+key_vault_url = "https://omg-key-vault.vault.azure.net/"
+
+credential = DefaultAzureCredential()
+
+secret_client = SecretClient(vault_url = key_vault_url, credential = credential)
+
+sp_pw = secret_client.get_secret('spotify-secret').value
 
 def config_spotify():
     config = '{"cid": "a8a94da4709b43a9a97f09ebe3f7f5c7"\
@@ -24,8 +36,8 @@ def config_spotify():
 
 cred_sp = config_spotify()
 
-cid = cred_sp["cid"]
-secret = cred_sp["secret"]
+cid = 'a8a94da4709b43a9a97f09ebe3f7f5c7'
+secret = sp_pw
 client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret,requests_timeout = 10)
 # client_credentials_manager.get_access_token()
 sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
