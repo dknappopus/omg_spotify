@@ -10,7 +10,7 @@ If there are 'Not Found' ISRCs in the output file, you should verify that the ti
 1) Open Terminal and navigate to where you want to store the code
 2) Clone Repo `git clone https://github.com/dknappopus/omg_spotify.git`
 3) navigate to repo `cd ./omg_spotify`
-4) Add input file to repo
+4) Add input file `<input_file_name.xlsx>` to repo
 5) Open Terminal
 6) Create virtual environment
    `python -m venv spotify_venv`
